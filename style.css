@@ -1,0 +1,87 @@
+
+ body {
+  /*margin: 40px;*/
+  /*background-color:rgb(18, 39, 66) ;*/
+  background-color:#fffff8 ;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-family: Oswald;
+}
+
+.scores{
+  font-size:2.5em;
+  text-align: center;
+}
+
+.name{
+  font-size: 2em;
+}
+#grid {
+  display: grid;
+  color: white;
+  grid-template-columns: 24vw 24vw 24vw 24vw;
+  /*grid-template-areas: */
+  grid-template-rows: 20vw 75vw;
+  grid-gap: 10px;
+  /*background-color: #fff;*/
+  color: #444;
+}
+
+.player {
+  color: #fff;
+  /*border-radius: 5px;*/
+  /*padding: 20px;*/
+  font-size: 150%;
+}
+
+.titleBar{
+  /*grid-area: titleBar;*/
+  grid-row: 1/1;
+  grid-column: 1/4;
+  font-size: 2em;
+  height: 15vh;
+  color: #444;
+  /*color: rgb(248, 250, 157);*/
+  margin:auto;
+  text-align: center;
+
+}
+.playerOne {
+  grid-row: 2/2;
+   background-color:#771427;
+   border: 2px solid #771427;
+  text-align: center;
+}
+
+
+.playerTwo {
+  grid-row: 2/2;
+   background: rgb(12, 56, 95);
+
+}
+.playerThree {
+   background: rgb(22, 86, 26);
+  grid-row: 2/2
+
+}
+.playerFour {
+  grid-row: 2/2;
+   background: rgb(61, 16, 129);
+}
+
+fieldset{
+  margin-bottom: 3em;
+}
+
+button{
+  height: 50px;
+}
+
+input{
+  height: 50px;
+}
+
+.score{
+  margin-top: 9em;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bones App</title>
+
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"> -->
+<!-- <link rel="stylesheet" type="text/css" href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/> -->
+<script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+
+<!-- <link rel="stylesheet/less" type="text/css" href="styles.less" /> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.6.1/less.min.js" charset="utf-8"></script> -->
+<!-- <link rel = "stylesheet" href= "reset.css"> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+
+<link rel = "stylesheet" href= "style.css">
+
+
+</head>
+<body>
+<div id = "grid">
+
+<div class = "titleBar"><h1> Bones Score Card </h1></div>
+<div class = "player playerOne">
+
+<div id = "nameOne" class = "name"></div>
+<fieldset class = "nameFieldOne">
+<input class = "nameInput" placeholder="Player Name">
+<button class = "submitName">Submit</button>
+</fieldset>
+<fieldset class = "score">
+<input class = "scoreInput" type="number" placeholder="score">
+<button class = "submitScore">Submit</button>
+<div>Score</div>
+</fieldset>
+<div class = "scores" id = "scoreOne"></div>
+
+</div>
+
+
+<div class = "player playerTwo">
+<div id = "nameTwo" class = "name"></div>
+<fieldset class = "nameFieldTwo">
+<input class = "nameInputTwo" placeholder="Player Name">
+<button class = "submitNameTwo">Submit</button>
+</fieldset>
+<fieldset class = "score">
+<input class = "scoreInputTwo" type="number" placeholder="score">
+<button class = "submitScoreTwo">Submit</button>
+<div>Score</div>
+</fieldset>
+<div class = "scores" id = "scoreTwo"></div>
+
+
+</div>
+<div class = "player playerThree">
+<div id = "nameThree" class = "name"></div>
+<fieldset class = "nameFieldThree">
+<input class = "nameInputThree" placeholder="Player Name">
+<button class = "submitNameThree">Submit</button>
+</fieldset>
+<fieldset class = "score">
+<input class = "scoreInputThree" type="number" placeholder="score">
+<button class = "submitScoreThree">Submit</button>
+<div>Score</div>
+</fieldset>
+<div class = "scores" id = "scoreThree"></div>
+
+</div>
+<div class = "player playerFour">
+<div id = "nameFour" class = "name"></div>
+<fieldset class = "nameFieldFour">
+<input class = "nameInputFour" placeholder="Player Name">
+<button class = "submitNameFour">Submit</button>
+</fieldset>
+<fieldset class = "score">
+<input class = "scoreInputFour" type="number" placeholder="score">
+<button class = "submitScoreFour">Submit</button>
+<div>Score</div>
+</fieldset>
+<div class = "scores" id = "scoreFour"></div>
+</div>
+</div>
+<script src="app.js"></script>
+<script>
+// player 4
+let scoreFour = 0
+$( ".submitScoreFour" ).click(function(elem) {
+  	let newScoreFour = $('.scoreInputFour').val()
+  	scoreFour += parseInt(newScoreFour)
+	$('.scoreInputFour').val("");
+	$('#scoreFour').text(scoreFour)
+});
+
+
+$(".submitNameFour").click(function(elem){
+	let newNameFour = $('.nameInputFour').val()
+  	$('#nameFour').text(newNameFour)
+  	$('.nameFieldFour').hide()
+
+})
+// Player 3
+let scoreThree = 0
+$( ".submitScoreThree" ).click(function(elem) {
+  	let newScoreThree = $('.scoreInputThree').val()
+  	scoreThree += parseInt(newScoreThree)
+	$('.scoreInputThree').val("");
+	$('#scoreThree').text(scoreThree)
+});
+
+
+$(".submitNameThree").click(function(elem){
+	let newNameThree = $('.nameInputThree').val()
+  	$('#nameThree').text(newNameThree)
+  	$('.nameFieldThree').hide()
+
+})
+
+
+// Player 2
+let scoreTwo = 0
+
+$( ".submitScoreTwo" ).click(function(elem) {
+  	let newScoreTwo = $('.scoreInputTwo').val()
+  	scoreTwo += parseInt(newScoreTwo)
+	$('.scoreInputTwo').val("");
+	$('#scoreTwo').text(scoreTwo)
+});
+
+
+$(".submitNameTwo").click(function(elem){
+	let newNameTwo = $('.nameInputTwo').val()
+  	$('#nameTwo').text(newNameTwo)
+  	$('.nameFieldTwo').hide()
+
+})
+
+// Player 1
+let scoreOne = 0
+
+$( ".submitScore" ).click(function(elem) {
+  	let newScore = $('.scoreInput').val()
+  	scoreOne += parseInt(newScore)
+	$('.scoreInput').val("");
+	$('#scoreOne').text(scoreOne)
+});
+
+
+$(".submitName").click(function(elem){
+	let newName = $('.nameInput').val()
+  	$('#nameOne').text(newName)
+  	$('.nameFieldOne').hide()
+
+})
+
+
+</script>
+</body>
+</html>
